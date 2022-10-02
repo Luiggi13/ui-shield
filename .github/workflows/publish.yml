@@ -1,0 +1,25 @@
+"name": "🚀 Publish to NPM"
+
+on:
+  push:
+    tags:
+      - npm*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+      - run: npm install -g @angular/cli
+      - run: npm install
+      - run: ng build custom-button
+      - run: cd /home/runner/work/uishield/uishield/dist/custom-button && npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
