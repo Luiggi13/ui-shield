@@ -20,6 +20,6 @@ jobs:
       - run: npm install -g @angular/cli
       - run: npm install
       - run: ng build custom-button
-      - run: cd /home/runner/work/uishield/uishield/dist/custom-button && npm publish --access public
+      - run: cd /home/runner/work/ui-shield/ui-shield/dist/custom-button && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
