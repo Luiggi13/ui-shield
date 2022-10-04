@@ -1,6 +1,6 @@
 {
   "name": "@cllansola/shield-ui",
-  "version": "0.0.0-alpha",
+  "version": "0.0.1-alpha",
   "description": "Shield UI",
   "peerDependencies": {
     "@angular/common": "^14.0.0",

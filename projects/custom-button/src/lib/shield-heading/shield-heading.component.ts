@@ -14,7 +14,7 @@ export class ShieldHeadingComponent implements OnInit {
   ngOnInit(): void {
   }
   sb() {
-    this.propagar.emit('Este dato viajará hacia el padre')
+    this.propagar.emit('Este dato viajará hacia el padre. Texto desde la ui.')
   }
 
 }
