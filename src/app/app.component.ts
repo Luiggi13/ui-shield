@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ui-shield';
+  @Output() propagar = new EventEmitter<string>();
+  parentData: string | undefined;
+  stylesObj = {'font-size': '2.1em', 'color': 'red'};
+
+  sb(count:string){
+    this.parentData = count;
+  }
 }

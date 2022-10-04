@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CustomButtonModule } from '@cllansola/shield-button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ShieldParModule, ShieldHeadingModule } from '@cllansola/shield-ui';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CustomButtonModule
+    ShieldParModule, ShieldHeadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
