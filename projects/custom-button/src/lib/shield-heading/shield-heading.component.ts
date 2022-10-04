@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ShieldHeadingComponent implements OnInit {
   constructor() { }
   @Input() title = '';
+  @Input() buttonTitle : string | undefined;
   @Output() propagar = new EventEmitter<string>();
 
 
